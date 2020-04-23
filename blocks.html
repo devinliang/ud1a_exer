@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        width:80%;
+        height:600px;
+        background-color: beige;
+
+        display: flex;
+        justify-content: space-around;
+    }
+    .block {
+        width:100px;
+        height:100px;
+        background-color: burlywood;
+        border:solid red thin;
+    }
+
+    @media screen and (max-width: 800px) {
+        #main {
+            background-color: aqua;
+        }
+        .block {
+            background-color: cadetblue;
+        }
+
+    }
+
+</style>
+<body>
+
+    <div id="main">
+        <div class="block">111</div>
+        <div class="block">222</div>
+        <div class="block">333</div>
+        <div class="block">444</div>
+        <div class="block">555</div>
+    </div>
+</body>
+</html>
