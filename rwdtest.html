@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </head>
 <style>
     body {
+        font-family: 'Noto Sans TC', sans-serif;
         width: 90%;
         max-width: 1280px;
         margin: auto;
         background-color: cornsilk;
     }
     header {
+        font-family: 'Lobster', cursive;
+        color: blueviolet;
+        font-size: 2em;
         background-color: cyan;
         height: 30vh;
         position: relative;
     }
     header>h1 {
         position: absolute;
-        top: 50%;
+        top: 10%;
         left: 50%;
-        transform: translate(-50%, -150%);
+        transform: translate(-50%, -20%);
     }
     footer {
         background-color: black;
@@ -39,27 +48,55 @@
 
         text-align: center;
         padding-bottom: 10px;
+
+        overflow: hidden;
     }
-    .picbox > img {
+
+    .picbox img {
         max-width: 100%;
+        
+        transition: all ease 0.5s;
     }
+    .picbox img:hover {        
+        transform: scale(1.1);
+    }
+
     .picbox > p {
 
     }
-    .picbox > a {
+    .picbox > .button {
         text-decoration: none;
         background-color: goldenrod;
         border-radius: 5px;
         padding: 5px;
     }
-    .picbox > a:hover {
+    .picbox > .button:hover {
         background-color: hotpink;
     }
     #content {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap;    
         justify-content: space-between;
     }
+
+    @media screen and (min-width:640px) and (max-width:960px) {
+        header {
+            background-color: lightpink;
+        }
+        .picbox {
+            width: 32%;
+        }
+    }
+
+    @media screen and (max-width:640px) {
+        header {
+            background-color: lightgreen;
+        }
+        .picbox {
+            width: 98%;
+        }
+    }
+
 </style>
 <body>
     <header>
@@ -67,21 +104,27 @@
     </header>
     <div id="content">
         <div class="picbox">
-            <img src="https://picsum.photos/id/1000/500/300" alt="">
+            <a href="https://picsum.photos/id/1000/600/300" data-fancybox="gallery">
+            <img src="https://picsum.photos/id/1000/600/300" alt="">
+            </a>
             <p>圖片說明文字</p>
-            <a href="#">按鈕</a>
+            <a href="#" class="button">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/100/500/300" alt="">
+            <a href="https://picsum.photos/id/100/600/300" data-fancybox="gallery">
+            <img src="https://picsum.photos/id/100/600/300" alt="">
+            </a>
             <p>圖片說明文字</p>
-            <a href="#">按鈕</a>
+            <a href="#" class="button">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1001/500/300" alt="">
+            <a href="https://picsum.photos/id/1001/600/300" data-fancybox="gallery">
+            <img src="https://picsum.photos/id/1001/600/300" alt="">
+            </a>
             <p>圖片說明文字</p>
-            <a href="#">按鈕</a>
+            <a href="#" class="button">按鈕</a>
         </div>
 
         <div class="picbox">
@@ -103,37 +146,37 @@
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1010/500/300" alt="">
+            <img src="https://picsum.photos/id/103/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1020/500/300" alt="">
+            <img src="https://picsum.photos/id/1025/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1010/500/300" alt="">
+            <img src="https://picsum.photos/id/1015/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1020/500/300" alt="">
+            <img src="https://picsum.photos/id/1035/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1010/500/300" alt="">
+            <img src="https://picsum.photos/id/115/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
 
         <div class="picbox">
-            <img src="https://picsum.photos/id/1020/500/300" alt="">
+            <img src="https://picsum.photos/id/102/500/300" alt="">
             <p>圖片說明文字</p>
             <a href="#">按鈕</a>
         </div>
